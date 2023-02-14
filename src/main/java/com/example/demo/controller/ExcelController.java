@@ -34,7 +34,7 @@ import jakarta.servlet.http.HttpServletResponse;
 public class ExcelController {
 	@Autowired
 	ExcelService excelService;
-	
+	 
 	@Autowired
 	private HttpServletResponse response;
 	
@@ -91,7 +91,7 @@ public class ExcelController {
 	
 	@PostMapping(value = "/import-list")
 	public Object importList(@RequestBody(required = true) MultipartFile file) {
-		Sheet sheet;
+		
 		return excelService.importList(file);
 	}
 }
